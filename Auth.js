@@ -139,9 +139,9 @@ fs.readFile("Login.txt",function(err, data)
 }
 else
 {
-    pp.exec("wmic csproduct get uuid",function(err, data)
+    pp.exec("wmic csproduct get uuid",function(err, hwi)
     {
-    var hwid = data.split("\n")[1];
+    var hwid = hwi.split("\n")[1];
     Login(hwid, data);
     })
 }
